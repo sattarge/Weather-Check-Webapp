@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="bg"></div>
+    <div class="clouds">
+        <div class="cloud cl1"></div>
+        <div class="cloud cl2"></div>
+        <div class="cloud cl3"></div>
+        <div class="cloud cl4"></div>
+        <div class="cloud cl5"></div>
+        <div class="cloud cl6"></div>
+        <div class="cloud cl7"></div>
+        <div class="cloud cl8"></div>
+        <div class="cloud cl9"></div>
+    </div>
+    <div class="rays"></div>
+
+    <!-- Search -->
+    <div class="search-wrap">
+        <input type="text" id="cityInput" placeholder="Enter city name"  list="countries"/>
+         <datalist id="countries" >
+        </datalist>
+        <button class="search-btn" id="searchBtn" aria-label="Search">
+            <svg viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="7" />
+                <line x1="16.5" y1="16.5" x2="22" y2="22" />
+            </svg>
+        </button>
+    </div>
+
+    <!-- Weather Card -->
+    <div class="card">
+        <div class="card-header">
+            <div class="location">
+                <svg class="pin" viewBox="0 0 15 19">
+                    <path
+                        d="M7.5 0C4.46 0 2 2.46 2 5.5c0 4.1 5.5 12.8 5.5 12.8S13 9.6 13 5.5C13 2.46 10.54 0 7.5 0zm0 8a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                </svg>
+                <span id="cityName"></span>
+            </div>
+            <div class="unit-toggle" id="toggleBtn">°F / °C </div>
+        </div>
+
+        <div class="temp-section">
+            <div class="weather-icon" id="weatherIcon"></div>
+            <div class="temperature" id="tempDisplay"></div>
+            <div class="condition" id="conditionDisplay"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-label" >Humidity</div>
+                <div class="stat-value" id="humidityDisplay"></div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Wind</div>
+                <div class="stat-value" id="windDisplay"></div>
+            </div>
+            <div class="stat">
+                <div class="stat-label">Feels Like</div>
+                <div class="stat-value" id="feelsDisplay"></div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
