@@ -1,9 +1,6 @@
 const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=pakistan&appid=7dfeb82ceccbf36c5ba3751b2bef884c`;
 const cityInput = document.getElementById("cityInput");
 const searchButton = document.getElementById("searchBtn");
-window.addEventListener("load", () => {
-  fetchWeather(apiUrl);
-});
 
 async function fetchWeather(newApi) {
   try {
